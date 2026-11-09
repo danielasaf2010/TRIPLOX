@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triplo X · Meu perfil</title>
+  <link rel="icon" type="image/png" href="image 1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="perfil.css" />
+</head>
+
+<body>
+
+
+  <div class="topbar">
+    <span>DA NOSSA CHAPA PRA SUA PORTA</span>
+    <span class="dot">•</span>
+    <span>Ter a dom, 18h às 00h</span>
+    <span class="dot">•</span>
+    <span>Belo Horizonte, MG</span>
+  </div>
+
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="image 1.png" alt="Triplo X Logo" class="logo-img" />
+      <div class="logo-text">
+        <strong>TRIPLO X</strong>
+        <small>Burger · Brasa · Rua</small>
+      </div>
+    </a>
+    
+    <div class="nav-links">
+      <a href="index.html" class="active">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="meus-pedidos.html">Meus pedidos</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html"><button class="btn-outline">Login</button></a>
+      <a href="cadastro.html"><button class="btn-solid">Cadastro</button></a>
+ 
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <span class="theme-toggle-thumb"></span>
+        <span class="theme-toggle-icon theme-toggle-sun">
+        
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </span>
+        <span class="theme-toggle-icon theme-toggle-moon">
+         
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </span>
+      </button>
+
+      <button class="nav-cart" id="cartBtn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 0 1-8 0" />
+        </svg>
+        <span id="cartCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+  
+  <section class="perfil-hero">
+    <p class="perfil-hero-tag">SUA CONTA / MEUS DADOS</p>
+    <h1 class="perfil-hero-title">VOCÊ JÁ É DE CASA.</h1>
+    <p class="perfil-hero-desc">Seus dados, seus endereços e suas preferências. Tudo no seu jeito.</p>
+  </section>
+
+  
+  <div class="perfil-layout">
+
+    
+    <aside class="perfil-sidebar">
+      <div class="perfil-sidebar-greeting">
+        <div class="perfil-avatar" id="perfilAvatar">??</div>
+        <h2 class="perfil-user-name" id="perfilNome">CARREGANDO...</h2>
+        <p class="perfil-user-since" id="perfilDesde"></p>
+      </div>
+      <nav class="perfil-nav">
+        <a href="meus-pedidos.html" class="perfil-nav-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M9 11l3 3L22 4" />
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+          </svg>
+          Meus pedidos
+        </a>
+        <a href="perfil.html" class="perfil-nav-item active">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          Meus dados
+        </a>
+        <a href="#enderecos" class="perfil-nav-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          Endereços
+        </a>
+        <a href="#seguranca" class="perfil-nav-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="3" y="11" width="18" height="11" rx="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+          Segurança
+        </a>
+      </nav>
+      <button class="perfil-sair">
+        Sair da conta
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+          <polyline points="16 17 21 12 16 7" />
+          <line x1="21" y1="12" x2="9" y2="12" />
+        </svg>
+      </button>
+    </aside>
+
+    
+    <div class="perfil-content">
+
+      
+      <div class="perfil-card perfil-card-user">
+        <div class="perfil-avatar" id="perfilAvatarCard">??</div>
+        <div class="perfil-user-info">
+          <h2 class="perfil-user-name" id="perfilNomeCard">CARREGANDO...</h2>
+          <p class="perfil-user-since" id="perfilDesdeCard">...</p>
+        </div>
+        <span class="perfil-badge-verificado">E-mail verificado</span>
+      </div>
+
+      
+      <div class="perfil-card" id="meus-dados">
+        <h3 class="perfil-card-title">SEUS DADOS.</h3>
+        <div class="perfil-form-grid">
+          <div class="perfil-field">
+            <label>Nome completo</label>
+            <input type="text" id="inputNome" placeholder="Seu nome completo" />
+          </div>
+          <div class="perfil-field">
+            <label>E-mail</label>
+            <div class="perfil-input-icon">
+              <input type="email" id="inputEmail" placeholder="seu@email.com" />
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+          </div>
+          <div class="perfil-field">
+            <label>Celular</label>
+            <input type="tel" id="inputTel" placeholder="(00) 00000-0000" maxlength="15" />
+          </div>
+          <div class="perfil-field">
+            <label>Data de nascimento</label>
+            <div class="perfil-input-icon">
+              <input type="text" id="inputNasc" placeholder="DD/MM/AAAA" maxlength="10" />
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <p class="perfil-celular-hint">Usamos seu celular apenas para falar sobre seu pedido.</p>
+        <div class="perfil-card-actions">
+          <button class="btn-salvar" id="btnSalvarDados">Salvar alterações</button>
+        </div>
+      </div>
+
+      
+      <div class="perfil-card" id="enderecos">
+        <div class="perfil-card-header">
+          <h3 class="perfil-card-title">ONDE A FOME MORA.</h3>
+          <button class="btn-novo-endereco">
+            Novo endereço
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+        </div>
+        <div class="perfil-endereco-item">
+          <div class="perfil-endereco-icon">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </div>
+          <div class="perfil-endereco-info">
+            <div class="perfil-endereco-tags">
+              <span class="tag-casa">Casa</span>
+              <span class="tag-padrao">Padrão</span>
+            </div>
+            <p class="perfil-endereco-rua" id="enderecoRua">Rua dos Pinheiros, 870 · Apto 42</p>
+            <p class="perfil-endereco-cidade" id="enderecoCidade">Pinheiros · São Paulo, SP · CEP 05423-001</p>
+          </div>
+          <button class="btn-editar-end">Editar</button>
+        </div>
+      </div>
+
+      
+      <div class="perfil-double">
+
+        
+        <div class="perfil-card" id="preferencias">
+          <h3 class="perfil-card-title">NO SEU RADAR.</h3>
+          <div class="perfil-checks">
+            <label class="perfil-check">
+              <input type="checkbox" id="prefWhatsapp" checked />
+              <span>Receber atualizações do pedido por WhatsApp.</span>
+            </label>
+            <label class="perfil-check">
+              <input type="checkbox" id="prefEmail" />
+              <span>Receber promoções e novidades por e-mail.</span>
+            </label>
+          </div>
+          <p class="perfil-check-hint">Você pode mudar suas escolhas a qualquer momento.</p>
+        </div>
+
+        
+        <div class="perfil-card" id="seguranca">
+          <h3 class="perfil-card-title">CONTA PROTEGIDA.</h3>
+          <p class="perfil-seguranca-desc">Uma senha forte mantém seus dados seguros.</p>
+          <button class="btn-alterar-senha">
+            Alterar senha
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="3" y="11" width="18" height="11" rx="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          </button>
+          <button class="btn-excluir-conta">Solicitar exclusão da conta</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <img src="image 1.png" alt="Logo Triplo X" class="logo-img logo-img--footer" />
+        <div class="logo-text">
+          <strong class="logo-white">TRIPLO X</strong>
+          <small>Burger · Brasa · Rua</small>
+        </div>
+      </div>
+      <p>Fome de verdade. Burger sem atalhos.<br>Feito na chapa, entregue no capricho.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#">Cardápio</a></li>
+        <li><a href="#">Meus pedidos</a></li>
+        <li><a href="#">Minha conta</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Fale com a gente</h4>
+      <ul>
+        <li><a href="tel:+5531999990303">(31) 97364-0119</a></li>
+        <li><a href="mailto:oi@triplox.com.br">oi@triplox.com.br</a></li>
+        <li><a href="#">Instagram: @triplox.burger</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Na sua área</h4>
+      <ul>
+        <li><a href="#">Belo Horizonte, MG</a></li>
+        <li><a href="#">Terça a domingo · 18h às 00h</a></li>
+        <li><a href="#">Entrega em até 15 km</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 TRIPLO X. Todos os direitos reservados.</p>
+    <div class="footer-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos de uso</a>
+      <a href="#">Informações sobre alérgenos</a>
+    </div>
+    <p class="footer-payments">PIX / VISA / MASTERCARD</p>
+  </div>
+</footer>
+
+  
+  <div class="toast" id="toast">
+    <span>✅</span>
+    <span id="toastMsg">Alterações salvas!</span>
+  </div>
+
+  
+<div class="modal-overlay" id="modalEnderecoOverlay">
+  <div class="modal-endereco" id="modalEndereco">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modalEnderecoTitulo">EDITAR ENDEREÇO</h3>
+      <button class="modal-fechar" id="modalEnderecoFechar">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      
+      <div class="perfil-field">
+        <label>CEP</label>
+        <div class="cep-row">
+          <input type="text" id="endCep" placeholder="00000-000" maxlength="9" />
+          <button class="btn-buscar-cep" id="btnBuscarCepModal">Buscar</button>
+        </div>
+        <p class="cep-hint" id="cepHintModal"></p>
+      </div>
+
+      <div class="perfil-form-grid">
+        <div class="perfil-field" style="grid-column: 1 / -1">
+          <label>Rua / Logradouro</label>
+          <input type="text" id="endRua" placeholder="Rua, Avenida..." />
+        </div>
+        <div class="perfil-field">
+          <label>Número</label>
+          <input type="text" id="endNum" placeholder="Ex: 870" />
+        </div>
+        <div class="perfil-field">
+          <label>Complemento</label>
+          <input type="text" id="endComp" placeholder="Apto, Bloco..." />
+        </div>
+        <div class="perfil-field">
+          <label>Bairro</label>
+          <input type="text" id="endBairro" placeholder="Bairro" />
+        </div>
+        <div class="perfil-field">
+          <label>Cidade</label>
+          <input type="text" id="endCidade" placeholder="Cidade" />
+        </div>
+        <div class="perfil-field">
+          <label>UF</label>
+          <input type="text" id="endUf" placeholder="MG" maxlength="2" />
+        </div>
+        <div class="perfil-field">
+          <label>Apelido</label>
+          <input type="text" id="endApelido" placeholder="Casa, Trabalho..." />
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-cancelar-modal" id="btnCancelarModal">Cancelar</button>
+      <button class="btn-salvar" id="btnSalvarEndereco">Salvar endereço</button>
+    </div>
+  </div>
+</div>
+
+
+  <script src="main.js"></script>
+  <script src="perfil.js"></script>
+</body>
+
+</html>

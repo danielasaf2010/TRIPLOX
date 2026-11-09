@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triplo X · Cardápio</title>
+  <link rel="icon" type="image/png" href="image 1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cardapio.css" />
+</head>
+
+<body>
+
+
+  <div class="topbar">
+    <span>DA NOSSA CHAPA PRA SUA PORTA</span>
+    <span class="dot">•</span>
+    <span>Ter a dom, 18h às 00h</span>
+    <span class="dot">•</span>
+    <span>Belo Horizonte, MG</span>
+  </div>
+
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="image 1.png" alt="Triplo X Logo" class="logo-img" />
+      <div class="logo-text">
+        <strong>TRIPLO X</strong>
+        <small>Burger · Brasa · Rua</small>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="cardapio.html" class="active">Cardápio</a>
+      <a href="meus-pedidos.html">Meus pedidos</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html"><button class="btn-outline">Login</button></a>
+      <a href="cadastro.html"><button class="btn-solid">Cadastro</button></a>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <span class="theme-toggle-thumb"></span>
+        <span class="theme-toggle-icon theme-toggle-sun">
+
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </span>
+        <span class="theme-toggle-icon theme-toggle-moon">
+
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </span>
+      </button>
+
+      <button class="nav-cart" id="cartBtn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 0 1-8 0" />
+        </svg>
+        <span id="cartCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+
+  <section class="cardapio-hero">
+    <div class="cardapio-hero-inner">
+      <div class="cardapio-hero-left">
+        <p class="cardapio-hero-tag">FOTO NA HORA. DO SEU JEITO.</p>
+        <h1 class="cardapio-hero-title">ESCOLHA SUA<br>PRÓXIMA MORDIDA.</h1>
+        <p class="cardapio-hero-desc">
+          Burgers autorais, acompanhamentos e combos pra qualquer tamanho de fome.
+        </p>
+      </div>
+      <div class="cardapio-status">
+        <span class="status-dot"></span>
+        Aberto agora · até 00h
+      </div>
+    </div>
+
+
+    <div class="cardapio-endereco">
+      <div class="endereco-info">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        <span>Entregar em: <strong>Rua dos Pinheiros, 670 · Pinheiros</strong></span>
+        <span class="endereco-sep">|</span>
+        <span>35–50 min</span>
+        <span class="endereco-sep">|</span>
+        <span>Taxa R$ 6,00</span>
+      </div>
+      <button class="btn-alterar">Alterar</button>
+    </div>
+  </section>
+
+
+  <div class="cardapio-search-bar">
+    <div class="cardapio-search-wrap">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.35-4.35" />
+      </svg>
+      <input type="text" id="searchInput" placeholder="Buscar burger, ingrediente ou combo..."
+        class="cardapio-search-input" />
+    </div>
+    <button class="btn-mais-pedidos" id="btnMaisPedidos">
+      Mais pedidos
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="m6 9 6 6 6-6" />
+      </svg>
+    </button>
+  </div>
+
+
+  <div class="cardapio-layout">
+
+
+    <aside class="cardapio-sidebar">
+      <h3 class="sidebar-title">FILTRE SUA FOME.</h3>
+
+      <div class="sidebar-section">
+        <p class="sidebar-label">CATEGORIAS</p>
+        <ul class="sidebar-cats">
+          <li class="cat-item active" data-cat="todos">Todos os produtos</li>
+          <li class="cat-item" data-cat="burgers">Burgers</li>
+          <li class="cat-item" data-cat="combos">Combos</li>
+          <li class="cat-item" data-cat="acompanhamentos">Acompanhamentos</li>
+          <li class="cat-item" data-cat="sobremesas">Sobremesas</li>
+          <li class="cat-item" data-cat="bebidas">Bebidas</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <p class="sidebar-label">PREFERÊNCIAS</p>
+        <div class="sidebar-checks">
+          <label class="sidebar-check">
+            <input type="checkbox" data-pref="vegetariano" /> Vegetariano
+          </label>
+          <label class="sidebar-check">
+            <input type="checkbox" data-pref="bacon" /> Com bacon
+          </label>
+          <label class="sidebar-check">
+            <input type="checkbox" data-pref="smash" /> Smash burger
+          </label>
+          <label class="sidebar-check">
+            <input type="checkbox" data-pref="sobremesas" /> Sobremesas
+          </label>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <p class="sidebar-label">FAIXA DE PREÇO</p>
+        <div class="sidebar-checks">
+          <label class="sidebar-check">
+            <input type="checkbox" data-price="ate30" /> Até R$ 30
+          </label>
+          <label class="sidebar-check">
+            <input type="checkbox" data-price="30a40" /> R$ 30 a R$ 40
+          </label>
+          <label class="sidebar-check">
+            <input type="checkbox" data-price="acima40" /> Acima de R$ 40
+          </label>
+        </div>
+      </div>
+
+      <button class="btn-limpar" id="btnLimpar">Limpar filtros</button>
+    </aside>
+
+
+    <div class="cardapio-main">
+
+      <div class="cardapio-top-bar">
+        <p class="produtos-count" id="produtosCount">6 produtos · Todos os produtos</p>
+        <p class="cardapio-top-tag">SEU FAVORITO TÁ AQUI</p>
+      </div>
+
+      <div class="cardapio-grid" id="cardapioGrid">
+
+
+        <div class="card-cardapio" data-cat="burgers" data-pref="bacon smash" data-price="39.90" data-name="Triplo X"
+          data-tag="O favorito da casa" data-badge="O FAVORITO DA CASA"
+          data-desc="3 smash de 80 g, cheddar, bacon crocante e molho X no pão brioche."
+          data-ingredientes="3x Smash 80g,Cheddar,Bacon crocante,Molho X,Pão brioche">
+          <div class="card-cardapio-img-wrap">
+            <img src="Fotografia gastronômica (2).png" alt="Triplo X" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">O FAVORITO DA CASA</span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">O favorito da casa</p>
+            <h3 class="card-cardapio-name">TRIPLO X</h3>
+            <p class="card-cardapio-desc">3 smash de 80 g, cheddar, bacon crocante e molho X no pão brioche.</p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 39,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-cardapio" data-cat="burgers" data-pref="smash" data-price="29.90" data-name="Duplo Smash"
+          data-tag="Clássico sem erro" data-badge="DUPLO SMASH"
+          data-desc="2 smash de 80 g, cheddar, picles e maionese da casa."
+          data-ingredientes="2x Smash 80g,Cheddar,Picles,Maionese da casa">
+          <div class="card-cardapio-img-wrap">
+            <img src="Fotografia gastronômica (4).png" alt="Duplo Smash" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">O FAVORITO DA CASA</span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">Clássico sem erro</p>
+            <h3 class="card-cardapio-name">DUPLO SMASH</h3>
+            <p class="card-cardapio-desc">
+              2 smash de 80 g, cheddar, picles e maionese da casa.
+            </p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 29,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-cardapio" data-cat="burgers" data-pref="smash" data-price="49.90"
+          data-name="Triplo Smash Cheddar" data-tag="Clássico sem erro" data-badge="Triplo Smash Cheddar"
+          data-desc="3 smash de 80 g, muito cheddar, cebola, tomate, alface, batata-frita e maionese verde da casa."
+          data-ingredientes=" 3x Smash de 80 g, Muito cheddar, Cebola, Tomate, Alface, Batata-frita, Maionese verde da casa">
+          <div class="card-cardapio-img-wrap">
+            <img src="cheddar.png" alt="Triplo Smash Cheddar" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">CLÁSSICO SEM ERRO</span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">Clássico sem erro</p>
+            <h3 class="card-cardapio-name">TRIPLO SMASH CHEDDAR</h3>
+            <p class="card-cardapio-desc">
+              3 smash de 80 g, muito cheddar, cebola, tomate, alface, batata-frita e maionese verde da casa.
+            </p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 49,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-cardapio" data-cat="burgers" data-pref="smash" data-price="34.90" data-name="Bacon na Brasa"
+          data-tag="Defumado na medida" data-badge="Bacon na Brasa"
+          data-desc="Blend de 160 g, bacon, queijo prato e cebola caramelizada."
+          data-ingredientes=" 1x Blend de 160 g, Bacon, Queijo prato, Cebola caramelizada">
+          <div class="card-cardapio-img-wrap">
+            <img src="Fotografia gastronômica (7).png" alt="Bacon na Brasa" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">DEFUMADO NA MEDIDA</span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">Defumado na medida</p>
+            <h3 class="card-cardapio-name">BACON NA BRASA</h3>
+            <p class="card-cardapio-desc">
+              Blend de 160 g, bacon, queijo prato e cebola caramelizada.
+            </p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 34,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-cardapio" data-cat="burgers" data-pref="vegetariano" data-price="32.90" data-name="X da Horta"
+          data-tag="Vegetariano" data-badge="X da Horta"
+          data-desc="Burger de grão-de-bico, queijo, rúcula e maionese da casa."
+          data-ingredientes=" 1x Burger de grão-de-bico, Queijo, Rúcula, Maionese da casa">
+          <div class="card-cardapio-img-wrap">
+            <img src="Fotografia gastronômica (8).png" alt="X da Horta" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">VEGETARIANO</span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">Vegetariano</p>
+            <h3 class="card-cardapio-name">X da Horta</h3>
+            <p class="card-cardapio-desc">
+              Burger de grão-de-bico, queijo, rúcula e maionese da casa.
+            </p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 32,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-cardapio" data-cat="sobremesas" data-pref="sobremesas" data-price="49.90" data-name="X OREO"
+          data-tag="Novo no Trilpo X" data-badge="X Oreo"
+          data-desc="2 blends de Oreo de 80 g, 1 blend de Nutella de 80 g, pão de Oreo e molho de Milka."
+          data-ingredientes=" 2x blends de Oreo de 80 g, 1x blend de Nutella de 80 g, Pão de Oreo, Molho de Milka">
+          <div class="card-cardapio-img-wrap">
+            <img src="x-oreo.png" alt="X Oreo" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">NOVO No TRIPLO X</span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">Novo no Triplo X</p>
+            <h3 class="card-cardapio-name">X Oreo</h3>
+            <p class="card-cardapio-desc">
+              2 blends de Oreo de 80 g, 1 blend de Nutella de 80 g, pão de Oreo e molho de Milka.
+            </p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 49,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-cardapio" data-cat="sobremesas" data-pref="sobremesas" data-price="29.90" data-name="X PLOSION"
+          data-tag="Sobremesa" data-badge="X Plosion" data-desc="Delicioso Petit Gâteau, no formato de X acompanhado de uma bola de sorvete sabor flocos de 100 g e
+          deliciosas frutas vermelhas." data-ingredientes=" 1x Petit Gâteau, 1x bola de sorvete sabor flocos de 100 g,
+          Deliciosas frutas vermelhas">
+          <div class="card-cardapio-img-wrap">
+            <img src="x-plo.png" alt="X Plosion" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">SOBREMESA</span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">Sobremesa</p>
+            <h3 class="card-cardapio-name">X Plosion</h3>
+            <p class="card-cardapio-desc">
+              Delicioso Petit Gâteau, no formato de X acompanhado de uma bola de sorvete sabor flocos de 100 g e
+              deliciosas frutas vermelhas.
+            </p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 29,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-cardapio" data-cat="acompanhamentos" data-pref="" data-price="14.90" data-name="BATATA DA CASA"
+          data-tag="Acompanhamentos" data-badge="Batata da casa"
+          data-desc="Porção de 200 g, crocante por fora, macia por dentro. Com molho X."
+          data-ingredientes=" 1x Porção de 200 g de batata, Molho X">
+          <div class="card-cardapio-img-wrap">
+            <img src="Fotografia gastronômica (9).png" alt="X Plosion" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">ACOMPANHAMENTOS</span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">Pra acompanhar</p>
+            <h3 class="card-cardapio-name">BATATA DA CASA</h3>
+            <p class="card-cardapio-desc">
+              Porção de 200 g, crocante por fora, macia por dentro. Com molho X.
+            </p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 14,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card-cardapio" data-cat="acompanhamentos" data-pref="" data-price="21.90" data-name="BATATA DA CASA"
+          data-tag="Acompanhamentos" data-badge="Anel de cebola"
+          data-desc="Porção de 200 g, sabor irrestível. Com molho X."
+          data-ingredientes=" 1x Porção de 200 g de anéis de cebola, Molho X">
+          <div class="card-cardapio-img-wrap">
+            <img src="X-ACOM.png" alt="X Plosion" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">ACOMPANHAMENTOS</span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">Pra acompanhar</p>
+            <h3 class="card-cardapio-name">X de Cebola</h3>
+            <p class="card-cardapio-desc">
+              Porção de 200 g, sabor irrestível. Com molho X.
+            </p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 21,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card-cardapio" data-cat="combos" data-pref="smash" data-price="54.90" data-name="COMBO DUPLO"
+          data-tag="Combo Duplo" data-badge="Combo Duplo"
+          data-desc="Duplo Smash + Batata da Casa + refrigerante em lata 350 ml."
+          data-ingredientes=" 1x Duplo Smash, 1x Batata da Casa, 1x refrigerante em lata 350 ml">
+          <div class="card-cardapio-img-wrap">
+            <img src="Fotografia gastronômica (10).png" alt="Combo Duplo" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">COMBO DUPLO</span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">Combo completo</p>
+            <h3 class="card-cardapio-name">COMBO DUPLO</h3>
+            <p class="card-cardapio-desc">
+              Duplo Smash + Batata da Casa + refrigerante em lata 350 ml.
+            </p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 54,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-cardapio" data-cat="combos" data-pref="smash" data-price="99.90" data-name="COM-BOM"
+          data-tag="Com-Bom" data-badge="Com-Bom"
+          data-desc="X Oreo + Triplo Smash Cheddar + refrigerante coca em lata 350 ml."
+          data-ingredientes=" 1x X Oreo, 1x Triplo Smash Cheddar, 1x refrigerante coca em lata 350 ml">
+          <div class="card-cardapio-img-wrap">
+            <img src="combo.png" alt="Combo Duplo" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">COMBO COMPLETO/span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">Combo completo</p>
+            <h3 class="card-cardapio-name">Com-Bom</h3>
+            <p class="card-cardapio-desc">
+              X Oreo + Triplo Smash Cheddar + refrigerante coca em lata 350 ml.
+            </p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 99,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-cardapio" data-cat="bebidas" data-pref="bebidas" data-price="5.90" data-name="Sprite"
+          data-tag="Refrigerante" data-badge="REFRIGERANTE" data-desc="Refrigerante em lata - Sprite 350 ml."
+          data-ingredientes="1x Lata Sprite 350ml">
+          <div class="card-cardapio-img-wrap">
+            <img src="sprite.png" alt="Sprite" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">REFRIGERANTE</span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">Refrigerante</p>
+            <h3 class="card-cardapio-name">Sprite</h3>
+            <p class="card-cardapio-desc">
+              Refrigerante em lata - Sprite 350 ml.
+            </p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 5,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card-cardapio" data-cat="bebidas" data-pref="bebidas" data-price="5.90" data-name="Fanta Uva"
+          data-tag="Refrigerante" data-badge="REFRIGERANTE" data-desc="Refrigerante em lata - Fanta Uva 350 ml."
+          data-ingredientes="1x Fanta Uva 350ml">
+          <div class="card-cardapio-img-wrap">
+            <img src="fanta-uva.png" alt="Fanta Uva" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">REFRIGERANTE</span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">Refrigerante</p>
+            <h3 class="card-cardapio-name">Fanta Uva</h3>
+            <p class="card-cardapio-desc">
+              Refrigerante em lata - Fanta Uva 350 ml.
+            </p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 5,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-cardapio" data-cat="bebidas" data-pref="bebidas" data-price="5.90" data-name="Coca Cola"
+          data-tag="Refrigerante" data-badge="REFRIGERANTE" data-desc="Refrigerante em lata - Coca Cola 350 ml."
+          data-ingredientes="1x Coca Cola 350ml">
+          <div class="card-cardapio-img-wrap">
+            <img src="coca.png" alt="Coca Cola" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">REFRIGERANTE</span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">Refrigerante</p>
+            <h3 class="card-cardapio-name">Coca Cola</h3>
+            <p class="card-cardapio-desc">
+              Refrigerante em lata - Coca Cola 350 ml.
+            </p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 5,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-cardapio" data-cat="bebidas" data-pref="bebidas" data-price="5.90" data-name="Coca Cola Zero"
+          data-tag="Refrigerante" data-badge="REFRIGERANTE" data-desc="Refrigerante em lata - Coca Cola Zero 350 ml."
+          data-ingredientes="1x Coca Cola Zero 350ml">
+          <div class="card-cardapio-img-wrap">
+            <img src="coca0.png" alt="Coca Cola Zero" class="card-cardapio-img" />
+            <span class="card-cardapio-badge">REFRIGERANTE</span>
+          </div>
+          <div class="card-cardapio-body">
+            <p class="card-cardapio-tag">Refrigerante</p>
+            <h3 class="card-cardapio-name">Coca Cola Zero</h3>
+            <p class="card-cardapio-desc">
+              Refrigerante em lata - Coca Cola Zero 350 ml.
+            </p>
+            <div class="card-cardapio-footer">
+              <span class="card-cardapio-price">R$ 5,90</span>
+              <button class="btn-adicionar btn-ver-produto">
+                Adicionar
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="cardapio-vazio" id="cardapioVazio">
+        <span>🔍</span>
+        <p>Nenhum produto encontrado.</p>
+        <small>Tente outro filtro ou busca.</small>
+      </div>
+
+
+      <div class="cardapio-aviso">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="12" />
+          <line x1="12" y1="16" x2="12.01" y2="16" />
+        </svg>
+        Alergias ou restrições? Confira os ingredientes e fale com a equipe antes do pedido.
+        Os produtos são preparados na mesma cozinha.
+      </div>
+
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <img src="image 1.png" alt="Logo Triplo X" class="logo-img logo-img--footer" />
+          <div class="logo-text">
+            <strong class="logo-white">TRIPLO X</strong>
+            <small>Burger · Brasa · Rua</small>
+          </div>
+        </div>
+        <p>Fome de verdade. Burger sem atalhos.<br>Feito na chapa, entregue no capricho.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Cardápio</a></li>
+          <li><a href="#">Meus pedidos</a></li>
+          <li><a href="#">Minha conta</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fale com a gente</h4>
+        <ul>
+          <li><a href="tel:+5531999990303">(31) 97364-0119</a></li>
+          <li><a href="mailto:oi@triplox.com.br">oi@triplox.com.br</a></li>
+          <li><a href="#">Instagram: @triplox.burger</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Na sua área</h4>
+        <ul>
+          <li><a href="#">Belo Horizonte, MG</a></li>
+          <li><a href="#">Terça a domingo · 18h às 00h</a></li>
+          <li><a href="#">Entrega em até 15 km</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 TRIPLO X. Todos os direitos reservados.</p>
+      <div class="footer-legal">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos de uso</a>
+        <a href="#">Informações sobre alérgenos</a>
+      </div>
+      <p class="footer-payments">PIX / VISA / MASTERCARD</p>
+    </div>
+  </footer>
+
+
+  <div class="toast" id="toast">
+    <span>✅</span>
+    <span id="toastMsg">Item adicionado!</span>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="cardapio.js"></script>
+
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-produto" id="modalProduto">
+
+      <button class="modal-close" id="modalClose">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+
+
+      <div class="modal-img-wrap">
+        <img src="" alt="" class="modal-img" id="modalImg" />
+        <span class="modal-badge" id="modalBadge"></span>
+      </div>
+
+
+      <div class="modal-content">
+        <p class="modal-tag" id="modalTag"></p>
+        <h2 class="modal-name" id="modalName"></h2>
+        <p class="modal-desc" id="modalDesc"></p>
+
+
+        <div class="modal-ingredientes" id="modalIngredientesWrap">
+          <p class="modal-ingredientes-title">O QUE VEM NO BURGER</p>
+          <div class="modal-ingredientes-list" id="modalIngredientes"></div>
+        </div>
+
+
+        <div class="modal-footer">
+          <div class="modal-price-wrap">
+            <span class="modal-price" id="modalPrice"></span>
+            <span class="modal-price-unit">por unidade</span>
+          </div>
+
+          <div class="modal-actions">
+
+            <div class="modal-qty">
+              <button class="modal-qty-btn" id="modalQtyMinus">−</button>
+              <span class="modal-qty-val" id="modalQtyVal">1</span>
+              <button class="modal-qty-btn" id="modalQtyPlus">+</button>
+            </div>
+
+
+            <button class="modal-btn-add" id="modalBtnAdd">
+              Adicionar
+              <span class="modal-btn-total" id="modalBtnTotal"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

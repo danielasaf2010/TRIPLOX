@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Triplo X · Login</title>
+  <link rel="icon" type="image/png" href="image 1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="auth.css"/>
+</head>
+<body>
+
+
+  <div class="topbar">
+    <span>DA NOSSA CHAPA PRA SUA PORTA</span>
+    <span class="dot">•</span>
+    <span>Ter a dom, 18h às 00h</span>
+    <span class="dot">•</span>
+    <span>Belo Horizonte, MG</span>
+  </div>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="image 1.png" alt="Triplo X Logo" class="logo-img" />
+      <div class="logo-text">
+        <strong>TRIPLO X</strong>
+        <small>Burger · Brasa · Rua</small>
+      </div>
+    </a>
+    
+    <div class="nav-links">
+      <a href="index.html" class="active">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="meus-pedidos.html">Meus pedidos</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html"><button class="btn-outline">Login</button></a>
+      <a href="cadastro.html"><button class="btn-solid">Cadastro</button></a>
+ 
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <span class="theme-toggle-thumb"></span>
+        <span class="theme-toggle-icon theme-toggle-sun">
+        
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </span>
+        <span class="theme-toggle-icon theme-toggle-moon">
+        
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </span>
+      </button>
+
+      <button class="nav-cart" id="cartBtn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 0 1-8 0" />
+        </svg>
+        <span id="cartCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+
+  <main class="auth-page">
+    <div class="auth-card">
+
+   
+      <div class="auth-left">
+        <div class="auth-left-content">
+          <p class="auth-left-tag">Você é de casa</p>
+          <h2 class="auth-left-title">BOM TE VER<br>DE NOVO.</h2>
+          <p class="auth-left-desc">
+            Seu burger favorito, seus pedidos e aquela vontade de repetir.
+            Tudo num só lugar.
+          </p>
+        </div>
+        <img
+          src="Fotografia gastronômica (1).png"
+          alt="Triplo X Burger"
+          class="auth-left-img"
+        />
+        <p class="auth-left-bottom">Sabor · Capricho · Personalidade</p>
+      </div>
+
+      
+      <div class="auth-right">
+        <p class="auth-eyebrow">Sua conta Triplo X</p>
+        <h2 class="auth-title">ENTRE E MATE<br>A FOME.</h2>
+        <p class="auth-sub">
+          Acesse para pedir, acompanhar e repetir seus favoritos.
+        </p>       
+
+        
+        <form class="auth-form" id="loginForm">
+          <div class="form-group">
+            <label class="form-label">E-mail</label>
+            <div class="form-input-wrap">
+              <input
+                class="form-input"
+                type="email"
+                id="loginEmail"
+                placeholder="seuemail@exemplo.com"
+                required
+              />
+              <span class="form-input-icon">✉</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Senha</label>
+            <div class="form-input-wrap">
+              <input
+                class="form-input"
+                type="password"
+                id="loginPwd"
+                placeholder="Digite sua senha"
+                required
+              />
+              <button
+                type="button"
+                class="form-input-icon form-input-btn"
+                id="toggleLoginPwd"
+              >👁</button>
+            </div>
+          </div>
+
+          <div class="form-row-check">
+            <label class="form-check">
+              <input type="checkbox" id="lembrar"/> Lembrar de mim
+            </label>
+            <a href="#" class="form-link">Esqueci minha senha</a>
+          </div>
+
+          <button type="submit" class="btn-auth">Entrar →</button>
+        </form>
+
+        <p class="form-footer">
+          Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a>
+        </p>
+        <p class="form-security">
+          🔒 Seus dados estão protegidos. A gente cuida da sua conta
+          com o mesmo capricho do burger.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+ 
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <img src="image 1.png" alt="Logo Triplo X" class="logo-img logo-img--footer" />
+          <div class="logo-text">
+            <strong class="logo-white">TRIPLO X</strong>
+            <small>Burger · Brasa · Rua</small>
+          </div>
+        </div>
+        <p>Fome de verdade. Burger sem atalhos.<br>Feito na chapa, entregue no capricho.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Cardápio</a></li>
+          <li><a href="#">Meus pedidos</a></li>
+          <li><a href="#">Minha conta</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fale com a gente</h4>
+        <ul>
+          <li><a href="tel:+5531999990303">(31) 97364-0119</a></li>
+          <li><a href="mailto:oi@triplox.com.br">oi@triplox.com.br</a></li>
+          <li><a href="#">Instagram: @triplox.burger</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Na sua área</h4>
+        <ul>
+          <li><a href="#">Belo Horizonte, MG</a></li>
+          <li><a href="#">Terça a domingo · 18h às 00h</a></li>
+          <li><a href="#">Entrega em até 15 km</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 TRIPLO X. Todos os direitos reservados.</p>
+      <div class="footer-legal">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos de uso</a>
+        <a href="#">Informações sobre alérgenos</a>
+      </div>
+      <p class="footer-payments">PIX / VISA / MASTERCARD</p>
+    </div>
+  </footer>
+  
+  <script src="auth.js"></script>
+</body>
+</html>

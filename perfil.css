@@ -1,0 +1,596 @@
+.perfil-hero {
+  background: #f5f0eb;
+  padding: 48px 80px 36px;
+  border-bottom: 1px solid #e8e0d8;
+}
+
+.perfil-hero-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #8b1a1a;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.perfil-hero-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 56px;
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 1;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.perfil-hero-desc {
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  color: #666;
+}
+
+
+.perfil-layout {
+  display: flex;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 40px auto 60px;
+  padding: 0 80px;
+  align-items: flex-start;
+}
+
+
+.perfil-sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.perfil-sidebar-greeting {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8e0d8;
+}
+
+.perfil-oi {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.perfil-sidebar-greeting small {
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  color: #888;
+}
+
+.perfil-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.perfil-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.perfil-nav-item:hover {
+  background: #f5f0eb;
+  color: #8b1a1a;
+}
+
+.perfil-nav-item.active {
+  background: #f5f0eb;
+  color: #8b1a1a;
+  font-weight: 600;
+}
+
+.perfil-nav-item svg {
+  flex-shrink: 0;
+}
+
+.perfil-sair {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  color: #888;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.perfil-sair:hover {
+  color: #8b1a1a;
+  background: #f5f0eb;
+}
+
+
+.perfil-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+.perfil-card {
+  background: #fff;
+  border: 1px solid #e8e0d8;
+  border-radius: 12px;
+  padding: 28px 32px;
+}
+
+.perfil-card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 26px;
+  font-weight: 900;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.perfil-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.perfil-card-header .perfil-card-title {
+  margin-bottom: 0;
+}
+
+
+.perfil-card-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fdf8f4;
+}
+
+.perfil-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #8b1a1a;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.perfil-user-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.perfil-user-since {
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.perfil-badge-verificado {
+  margin-left: auto;
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2d7a2d;
+  background: #eaf5ea;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+
+.perfil-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.perfil-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.perfil-field label {
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.perfil-field input {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: #fafafa;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.perfil-field input:focus {
+  border-color: #8b1a1a;
+  background: #fff;
+}
+
+.perfil-input-icon {
+  position: relative;
+}
+
+.perfil-input-icon input {
+  width: 100%;
+  padding-right: 36px;
+  box-sizing: border-box;
+}
+
+.perfil-input-icon svg {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+}
+
+.perfil-celular-hint {
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.perfil-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-salvar {
+  background: #8b1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-salvar:hover {
+  background: #6e1414;
+}
+
+
+.btn-novo-endereco {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1.5px solid #8b1a1a;
+  color: #8b1a1a;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-novo-endereco:hover {
+  background: #8b1a1a;
+  color: #fff;
+}
+
+.perfil-endereco-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background: #fdf8f4;
+  border-radius: 10px;
+  border: 1px solid #e8e0d8;
+}
+
+.perfil-endereco-icon {
+  width: 36px;
+  height: 36px;
+  background: #8b1a1a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.perfil-endereco-tags {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.tag-casa, .tag-padrao {
+  font-family: 'Barlow', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.tag-casa {
+  background: #8b1a1a;
+  color: #fff;
+}
+
+.tag-padrao {
+  background: #e8e0d8;
+  color: #555;
+}
+
+.perfil-endereco-rua {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.perfil-endereco-cidade {
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.btn-editar-end {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #8b1a1a;
+  cursor: pointer;
+  text-decoration: underline;
+  flex-shrink: 0;
+}
+
+
+.perfil-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+
+.perfil-checks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.perfil-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  color: #444;
+}
+
+.perfil-check input[type="checkbox"] {
+  accent-color: #8b1a1a;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.perfil-check-hint {
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px;
+  color: #aaa;
+}
+
+
+.perfil-seguranca-desc {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn-alterar-senha {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #8b1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 12px;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-alterar-senha:hover {
+  background: #6e1414;
+}
+
+.btn-excluir-conta {
+  background: none;
+  border: none;
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px;
+  color: #aaa;
+  cursor: pointer;
+  text-decoration: underline;
+  display: block;
+  margin: 0 auto;
+  transition: color 0.2s;
+}
+
+.btn-excluir-conta:hover {
+  color: #8b1a1a;
+}
+
+
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.modal-open {
+  display: flex;
+}
+
+.modal-endereco {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 560px;
+  margin: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  animation: modalIn 0.2s ease;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 24px 0;
+}
+
+.modal-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.modal-fechar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  padding: 4px;
+  border-radius: 6px;
+  transition: color 0.2s;
+}
+
+.modal-fechar:hover { color: #1a1a1a; }
+
+.modal-body {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cep-row {
+  display: flex;
+  gap: 8px;
+}
+
+.cep-row input { flex: 1; }
+
+.btn-buscar-cep {
+  background: #8b1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.btn-buscar-cep:hover { background: #6e1414; }
+
+.cep-hint {
+  font-size: 0.78rem;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 0 24px 24px;
+}
+
+.btn-cancelar-modal {
+  background: none;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.btn-cancelar-modal:hover { border-color: #aaa; }

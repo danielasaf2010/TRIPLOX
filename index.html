@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triplo X · Burger · Brasa · Rua</title>
+  <link rel="icon" type="image/png" href="image 1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  
+  <div class="topbar">
+    <span>DA NOSSA CHAPA PRA SUA PORTA</span>
+    <span class="dot">•</span>
+    <span>Ter a dom, 18h às 00h</span>
+    <span class="dot">•</span>
+    <span>Belo Horizonte, MG</span>
+  </div>
+
+  
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="image 1.png" alt="Triplo X Logo" class="logo-img" />
+      <div class="logo-text">
+        <strong>TRIPLO X</strong>
+        <small>Burger · Brasa · Rua</small>
+      </div>
+    </a>
+    
+    <div class="nav-links">
+      <a href="index.html" class="active">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="meus-pedidos.html">Meus pedidos</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html"><button class="btn-outline">Login</button></a>
+      <a href="cadastro.html"><button class="btn-solid">Cadastro</button></a>
+      
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <span class="theme-toggle-thumb"></span>
+        <span class="theme-toggle-icon theme-toggle-sun">
+          
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </span>
+        <span class="theme-toggle-icon theme-toggle-moon">
+          
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </span>
+      </button>
+
+      <button class="nav-cart" id="cartBtn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 0 1-8 0" />
+        </svg>
+        <span id="cartCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+  
+  <section class="hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Três vezes mais atitude.</p>
+      <h1 class="hero-title">SUA FOME.<br>NOSSA<br>OBSESSÃO.</h1>
+      <p class="hero-desc">
+        Smash na chapa, queijo derretendo e zero atalhos.
+        O burger que chega quente e fica na memória.
+      </p>
+      <div class="hero-btns">
+        <a href="cardapio.html"><button class="btn-hero-primary" onclick="scrollTo('produtos')">
+            Pedir meu burger →
+          </button></a>
+        <a href="cardapio.html"><button class="btn-hero-secondary" onclick="scrollTo('sobre')">
+            Conhecer a casa
+          </button></a>
+      </div>
+      <div class="hero-meta">
+        <span>⏱ 35–50 min de entrega</span>
+        <span>🔥 Feito na hora</span>
+        <span>💰 A partir de R$ 29,90</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="Fotografia gastronômica (1).png" alt="Triplo X — o burger da casa" class="hero-img" />
+      <div class="hero-tag">O ORIGINAL DA CASA</div>
+      <div class="hero-badge">
+        <p>3 smash. 1 experiência.</p>
+        <small>R$ 39,90 · o favorito da casa</small>
+      </div>
+    </div>
+  </section>
+
+  
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span class="ticker-item">SMASH DE VERDADE</span>
+      <span class="ticker-item">MOLHO DA CASA</span>
+      <span class="ticker-item">FEITO NA HORA</span>
+      <span class="ticker-item">SEM ECONOMIA NO SABOR</span>
+      <span class="ticker-item">SMASH DE VERDADE</span>
+      <span class="ticker-item">MOLHO DA CASA</span>
+      <span class="ticker-item">FEITO NA HORA</span>
+      <span class="ticker-item">SEM ECONOMIA NO SABOR</span>
+      <span class="ticker-item">SMASH DE VERDADE</span>
+      <span class="ticker-item">MOLHO DA CASA</span>
+      <span class="ticker-item">FEITO NA HORA</span>
+      <span class="ticker-item">SEM ECONOMIA NO SABOR</span>
+      <span class="ticker-item">SMASH DE VERDADE</span>
+      <span class="ticker-item">MOLHO DA CASA</span>
+      <span class="ticker-item">FEITO NA HORA</span>
+      <span class="ticker-item">SEM ECONOMIA NO SABOR</span>
+      <span class="ticker-item">SMASH DE VERDADE</span>
+      <span class="ticker-item">MOLHO DA CASA</span>
+      <span class="ticker-item">FEITO NA HORA</span>
+      <span class="ticker-item">SEM ECONOMIA NO SABOR</span>
+      <span class="ticker-item">SMASH DE VERDADE</span>
+      <span class="ticker-item">MOLHO DA CASA</span>
+      <span class="ticker-item">FEITO NA HORA</span>
+      <span class="ticker-item">SEM ECONOMIA NO SABOR</span>
+    </div>
+  </div>
+
+  
+  <section class="section produtos" id="produtos">
+    <div class="container">
+      <div class="produtos-header">
+        <div>
+          <p class="section-eyebrow">A fome tem seus favoritos</p>
+          <h2 class="section-title">OS MAIS PEDIDOS DA RUA.</h2>
+          <p class="section-sub">Três motivos pra você não deixar pra depois.</p>
+        </div>
+        <a href="cardapio.html"><button class="btn-ver-cardapio">Ver cardápio completo ↗</button></a>
+      </div>
+    </div>
+
+    <div class="produtos-grid">
+
+      
+      <div class="card-produto">
+        <img src="Fotografia gastronômica (2).png" alt="Triplo X" class="card-img" />
+        <div class="card-body">
+          <p class="card-tag">O favorito da casa</p>
+          <h3 class="card-name">TRIPLO X</h3>
+          <p class="card-desc">
+            3 smash de 80 g, cheddar, bacon crocante e molho X no pão brioche.
+          </p>
+          <div class="card-footer">
+            <span class="card-price">R$ 39,90</span>
+            <button class="btn-add" data-name="Triplo X" data-price="39.90" data-img="Fotografia gastronômica (2).png">
+              Adicionar +
+            </button>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="card-produto">
+        <img src="Fotografia gastronômica (3).png" alt="Duplo Smash" class="card-img" />
+        <div class="card-body">
+          <p class="card-tag">Clássico sem erro</p>
+          <h3 class="card-name">DUPLO SMASH</h3>
+          <p class="card-desc">
+            2 smash de 80 g, cheddar, picles e maionese da casa.
+          </p>
+          <div class="card-footer">
+            <span class="card-price">R$ 29,90</span>
+            <button class="btn-add" data-name="Duplo Smash" data-price="29.90"
+              data-img="Fotografia gastronômica (3).png">
+              Adicionar +
+            </button>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="card-produto">
+        <img src="Fotografia gastronômica (4).png" alt="Bacon na Brasa" class="card-img" />
+        <div class="card-body">
+          <p class="card-tag">Defumado na medida</p>
+          <h3 class="card-name">BACON NA BRASA</h3>
+          <p class="card-desc">
+            Blend de 160 g, bacon, queijo prato e cebola caramelizada.
+          </p>
+          <div class="card-footer">
+            <span class="card-price">R$ 34,90</span>
+            <button class="btn-add" data-name="Bacon na Brasa" data-price="34.90"
+              data-img="Fotografia gastronômica (4).png">
+              Adicionar +
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  
+  <div class="combo-banner">
+    <img src="Fotografia gastronômica (5).png" alt="Combo Completo — Burger, Batata e Refri" class="combo-img-real" />
+    <div class="combo-content">
+      <p class="combo-eyebrow">Burger + Batata + Refri</p>
+      <h2 class="combo-title">FOME GRANDE.<br>COMBO COMPLETO.</h2>
+      <p class="combo-desc">
+        O Duplo Smash e seus melhores parceiros. Mais sabor, menos indecisão.
+      </p>
+      <p class="combo-price">R$ 44,90</p>
+      <button class="btn-combo btn-add" data-name="Combo Completo" data-price="44.90"
+        data-img="Fotografia gastronômica (5).png">
+        Quero meu combo →
+      </button>
+    </div>
+  </div>
+
+  
+  <section class="section sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-inner">
+        <div class="sobre-img-wrap">
+          <img src="Fotografia gastronômica (6).png" alt="Cozinheiro preparando smash na chapa"
+            class="sobre-img-real" />
+        </div>
+        <div class="sobre-content">
+          <p class="section-eyebrow">Não é só hambúrguer. É Triplo X.</p>
+          <h2 class="section-title">DA CHAPA.<br>DA RUA.<br>DE VERDADE.</h2>
+          <p class="sobre-text">
+            Nasceu da vontade de fazer o simples ser inesquecível. Blend
+            selecionado, chapa quente e uma receita que a gente leva a sério.
+          </p>
+          <p class="sobre-text">
+            Nosso nome tem três letras de atitude: sabor, capricho e
+            personalidade. Cada pedido carrega as três.
+          </p>
+          <div class="sobre-tags">
+            <span class="sobre-tag">Blend Fresco</span>
+            <span class="sobre-tag">Molho Autoral</span>
+            <span class="sobre-tag">Pão Macio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section como" id="como">
+    <div class="container">
+      <p class="section-eyebrow">Sem complicação</p>
+      <h2 class="section-title">DA VONTADE À PRIMEIRA MORDIDA.</h2>
+      <div class="como-steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-icon"><img src="Vector.png"></div>
+          <h3 class="step-title">Escolha seu favorito</h3>
+          <p class="step-desc">
+            Explore o cardápio e monte a combinação que tem a sua cara.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-icon"><img src="Vector (1).png"></div>
+          <h3 class="step-title">Deixe com a gente</h3>
+          <p class="step-desc">
+            Confirme seu endereço e pague com Pix ou cartão, sem sair do site.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-icon"><img src="Vector (2).png"></div>
+          <h3 class="step-title">Prepare a primeira mordida</h3>
+          <p class="step-desc">
+            Acompanhe o pedido. A gente prepara na hora e leva até você.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="cobertura" id="cobertura">
+    <div class="cobertura-inner">
+      <div class="cobertura-left">
+        <p class="section-eyebrow">A gente chega até você</p>
+        <h2 class="section-title">BARROCA E ARREDORES.<br>QUENTINHO, DO JEITO CERTO.</h2>
+        <p class="section-sub">
+          Entregas em até 15 km da nossa cozinha. De terça a domingo, das 18h às 00h.
+        </p>
+      </div>
+      <div class="cobertura-right">
+        <label class="cobertura-label">Confira sua região</label>
+        <p class="cobertura-sublabel">Seu CEP</p>
+        <div class="cep-form">
+          <input class="cep-input" type="text" placeholder="Digite seu CEP" id="cepInput" maxlength="9" />
+          <button class="btn-cep" id="btnCep">Consultar</button>
+        </div>
+        <p class="cep-hint">Prazo médio: 35–50 min. Taxa calculada pelo endereço.</p>
+        <div class="cep-result" id="cepResult"></div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <div class="reviews-header">
+        <div>
+          <p class="section-eyebrow">Quem prova, volta.</p>
+          <h2 class="section-title">O BOCA A BOCA NÃO MENTE.</h2>
+        </div>
+        <div class="reviews-rating">
+          <span class="stars">★</span>
+          <span>4,9 / 5 · +500 avaliações</span>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            O Triplo X é absurdo! Chegou quentinho, com a batata crocante.
+            Já virou meu pedido de sexta.
+          </p>
+          <p class="review-author"><strong>Heitor (Mano X)</strong> · Dono da Djinn</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            Smash bem feito, queijo na medida e um molho que faz toda a diferença. Sem erro.
+          </p>
+          <p class="review-author"><strong>Davi Chaves</strong> · Dono da Djinn</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            O X da Horta me surpreendeu. Sabor de verdade e entrega supercuidadosa. Amei!
+          </p>
+          <p class="review-author">
+            <strong>Milene Cecília Torres da Costa</strong> · Sócia da Djinn
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="faq-inner">
+        <div class="faq-left">
+          <p class="section-eyebrow">Antes da primeira mordida</p>
+          <h2 class="section-title">FICOU COM<br>ALGUMA DÚVIDA?</h2>
+          <p class="section-sub">
+            Se precisar, chama no WhatsApp. A gente ajuda você a matar a fome.
+          </p>
+          <br />
+          <a href="https://wa.me/5531973640119" target="_blank">
+            <button class="btn-whatsapp">Falar com a TRIPLO X </button>
+          </a>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button class="faq-question">
+              Qual é o prazo de entrega?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Em média, 35 a 50 minutos. O prazo é confirmado com o seu endereço
+              e pode variar nos horários de maior movimento.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Quais formas de pagamento vocês aceitam?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Aceitamos Pix, cartão de crédito e débito (Visa, Mastercard e Elo).
+              O pagamento é feito diretamente no site, de forma segura.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Tem opção vegetariana?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Sim! Temos o X da Horta, feito com blend de grão-de-bico e beterraba,
+              com queijo, alface, tomate e molho especial da casa.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Posso personalizar meu hambúrguer?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Pode sim! No momento do pedido você pode adicionar ou remover
+              ingredientes. Basta deixar uma observação no campo disponível.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="cta-final">
+    <p class="section-eyebrow">A chapa tá quente.</p>
+    <h2 class="cta-final-title">BORA RESOLVER<br>ESSA FOME?</h2>
+    <p class="cta-final-sub">Seu próximo burger favorito está a poucos cliques daqui.</p>
+    <a href="cardapio.html"><button class="btn-cta-final" onclick="scrollTo('produtos')">
+        Escolher meu burger →
+      </button></a>
+  </section>
+
+  
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <img src="image 1.png" alt="Logo Triplo X" class="logo-img logo-img--footer" />
+          <div class="logo-text">
+            <strong class="logo-white">TRIPLO X</strong>
+            <small>Burger · Brasa · Rua</small>
+          </div>
+        </div>
+        <p>Fome de verdade. Burger sem atalhos.<br>Feito na chapa, entregue no capricho.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Cardápio</a></li>
+          <li><a href="#">Meus pedidos</a></li>
+          <li><a href="#">Minha conta</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fale com a gente</h4>
+        <ul>
+          <li><a href="tel:+5531973640119">(31) 97364-0119</a></li>
+          <li><a href="mailto:oi@triplox.com.br">oi@triplox.com.br</a></li>
+          <li><a href="#">Instagram: @triplox.burger</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Na sua área</h4>
+        <ul>
+          <li><a href="#">Belo Horizonte, MG</a></li>
+          <li><a href="#">Terça a domingo · 18h às 00h</a></li>
+          <li><a href="#">Entrega em até 15 km</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 TRIPLO X. Todos os direitos reservados.</p>
+      <div class="footer-legal">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos de uso</a>
+        <a href="#">Informações sobre alérgenos</a>
+      </div>
+      <p class="footer-payments">PIX / VISA / MASTERCARD</p>
+    </div>
+  </footer>
+
+  
+  <div class="toast" id="toast">
+    <span>✅</span>
+    <span id="toastMsg">Item adicionado!</span>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
